@@ -807,69 +807,96 @@ button {
   border-radius: 8px;
   background: var(--gold);
 }
+@media (max-width: 700px) {
+  .letter-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 
+  .photo-stack {
+    height: 230px;
+  }
+
+  .polaroid {
+    width: 150px;
+  }
+
+  .message-card {
+    max-height: 47vh;
+    overflow: auto;
+  }
+
+  .page-letter {
+    padding: 8vh 8vw;
+  }
+
+  .page-gallery {
+    padding-top: 13vh;
+  }
+
+  .polaroid-wall {
+    height: 53vh;
+  }
+
+  .wall-photo {
+    width: 28vw;
+  }
+
+  .p1 {
+    left: 0;
+  }
+
+  .p2 {
+    left: 19%;
+    top: 17%;
+  }
+
+  .p3 {
+    left: 37%;
+    top: 5%;
+  }
+
+  .p4 {
+    right: 18%;
+    top: 17%;
+  }
+
+  .p5 {
+    right: 0;
+  }
+
+  .record {
+    width: 190px;
+    height: 190px;
+    left: 2%;
+  }
+
+  .album-card {
+    width: 160px;
+    height: 190px;
+    right: 0;
+  }
+
+  .vinyl-scene {
+    height: 230px;
+  }
+
+  .next-btn {
+    bottom: 3.5%;
+  }
+
+  .nav-dots {
+    right: 9px;
+  }
+
+  .final-note {
+    top: 5%;
+    font-size: 0.63rem;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
     transition: none !important;
-  }
-}
-/* =========================
-   ROTATE PHONE WARNING
-   ========================= */
-
-.rotate-warning {
-  display: none;
-}
-
-@media (orientation: portrait) and (max-width: 900px) {
-  .rotate-warning {
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--maroon-dark);
-    color: #fff;
-    text-align: center;
-  }
-
-  .rotate-warning-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .rotate-icon {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    animation: rotatePhone 1.8s ease-in-out infinite;
-  }
-
-  .rotate-warning p {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 2rem;
-    margin: 0;
-  }
-
-  .rotate-warning span {
-    margin-top: 0.5rem;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    opacity: 0.7;
-  }
-}
-
-@keyframes rotatePhone {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(90deg);
   }
 }
