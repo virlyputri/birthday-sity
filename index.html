@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Siti ♡</title>
+    <meta name="description" content="A little birthday surprise for Siti." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <div class="progress"><span id="progressBar"></span></div>
+
+    <main id="book">
+      <!-- 01 — OPENING -->
+      <section class="page page-intro active" data-page="0">
+        <!-- Ganti file ini dengan foto background kamu:
+           assets/page1-bg.jpg -->
+        <div
+          class="intro-bg"
+          style="background-image: url(&quot;assets/bg.png&quot;)"
+        ></div>
+        <div class="intro-copy">
+          <p class="eyebrow">a little something for you</p>
+          <h1>You got a mail!</h1>
+
+          <button
+            class="envelope interactive"
+            id="openMail"
+            aria-label="Open the letter"
+          >
+            <!-- Bagian belakang amplop -->
+            <span class="envelope-paper"></span>
+            <!-- Lipatan bagian depan -->
+            <span class="envelope-pocket"></span>
+            <!-- Tutup amplop -->
+            <span class="env-flap"></span>
+            <!-- Wax seal -->
+            <span class="wax-seal">
+              <span class="wax-ornament">S</span>
+            </span>
+          </button>
+
+          <p class="hint">tap anywhere to continue</p>
+        </div>
+      </section>
+
+      <!-- 02 — TITLE -->
+      <section class="page page-title" data-page="1">
+        <!-- Ganti dengan foto halaman 2 jika mau -->
+        <div class="title-photo photo-surface" data-photo="cover">
+          <div class="photo-placeholder">YOUR<br />PHOTO</div>
+        </div>
+
+        <div class="title-card">
+          <p class="script small">Happy</p>
+          <h2>Birthday</h2>
+          <p class="script">Ity ♡</p>
+          <div class="heart-line">✦ ───────── ✦</div>
+        </div>
+
+        <button class="next-btn interactive" data-next>continue ↓</button>
+      </section>
+
+      <!-- 03 — LETTER + CLICKABLE PHOTO SLIDER -->
+      <section class="page page-letter" data-page="2">
+        <div class="letter-layout">
+          <div
+            class="photo-stack interactive"
+            id="memorySlider"
+            aria-label="Klik foto untuk mengganti foto"
+          >
+            <div class="polaroid photo-slide active-slide" data-slide="0">
+              <div class="photo-placeholder">
+                <img src="assets/polaroid1.png" />PHOTO<br />01
+              </div>
+            </div>
+
+            <div class="polaroid photo-slide" data-slide="1">
+              <div class="photo-placeholder">
+                <img src="assets/polaroid2.png" />PHOTO<br />02
+              </div>
+            </div>
+
+            <div class="polaroid photo-slide" data-slide="1">
+              <div class="photo-placeholder">
+                <img src="assets/polaroid3.png" />PHOTO<br />02
+              </div>
+            </div>
+
+            <div class="slider-hint">click the photo ♡</div>
+            <div class="slider-dots">
+              <span class="slide-dot active"></span>
+              <span class="slide-dot"></span>
+              <span class="slide-dot"></span>
+            </div>
+          </div>
+
+          <article class="message-card">
+            <p class="eyebrow">A LITTLE LETTER</p>
+            <h2>happy birthday preety</h2>
+            <p>
+              happy birthday to my sweet and kind friends! hope you'll awalys be
+              surrounded by love and happiness, i hope this year brings you
+              everythings you have ever wished for. i'll always be proud of what
+              you've done and will do
+            </p>
+            <p>always proud of you,</p>
+            <p>once again, happy birthday!</p>
+            <p class="signature">♡</p>
+          </article>
+        </div>
+
+        <button class="next-btn interactive" data-next>our memories →</button>
+      </section>
+
+      <!-- 04 — MEMORIES -->
+      <section class="page page-gallery" data-page="3">
+        <header class="section-heading">
+          <span class="tiny-icon">✦</span>
+          <p>little pieces of us</p>
+          <h2>MEMORIES</h2>
+        </header>
+
+        <div class="polaroid-wall">
+          <div class="wall-photo p1 photo-surface">
+            <div class="photo-placeholder">
+              <img src="assets/moment1.jpeg" />MOMENT<br />01
+            </div>
+          </div>
+          <div class="wall-photo p2 photo-surface">
+            <div class="photo-placeholder">
+              <img src="assets/moment2.jpeg" />MOMENT<br />02
+            </div>
+          </div>
+          <div class="wall-photo p3 photo-surface">
+            <div class="photo-placeholder">
+              <img src="assets/moment3.jpeg" />MOMENT<br />03
+            </div>
+          </div>
+          <div class="wall-photo p4 photo-surface">
+            <div class="photo-placeholder">
+              <img src="assets/moment4.jpeg" />MOMENT<br />04
+            </div>
+          </div>
+          <div class="wall-photo p5 photo-surface">
+            <div class="photo-placeholder">
+              <img src="assets/moment5.jpeg" />MOMENT<br />05
+            </div>
+          </div>
+        </div>
+
+        <p class="gallery-caption">
+          some ordinary days became my favorite memories.
+        </p>
+        <button class="next-btn interactive" data-next>
+          one more memory →
+        </button>
+      </section>
+
+      <!-- 05 — VIDEO -->
+      <section class="page page-video" data-page="4">
+        <!-- Taruh video kamu di: assets/birthday-video.mp4
+           Autoplay + muted diperlukan agar browser mengizinkan autoplay. -->
+        <video
+          id="birthdayVideo"
+          class="birthday-video"
+          src="assets/birthday-video.mp4"
+          autoplay
+          loop
+          playsinline
+          preload="auto"
+        ></video>
+
+        <div class="video-fallback">
+          <span>YOUR BIRTHDAY VIDEO</span>
+          <small>assets/birthday-video.mp4</small>
+        </div>
+
+        <div class="video-overlay">
+          <p class="script">for the memories</p>
+          <h2>made with love.</h2>
+        </div>
+      </section>
+
+      <!-- 07 — FINAL -->
+      <section class="page page-final" data-page="6">
+        <!-- Ganti dengan foto final kamu -->
+        <div class="final-photo photo-surface">
+          <div class="final-photo"></div>
+        </div>
+
+        <div class="final-overlay">
+          <p class="script">Happy</p>
+          <h2>Birthday</h2>
+          <p class="script">Ity ♡</p>
+          <span class="final-date">a little surprise, made just for you</span>
+        </div>
+
+        <div class="final-note">
+          some gifts aren't expensive,<br />just meaningful. 💌
+        </div>
+        <button class="restart interactive" id="restart">
+          ↻ read it again
+        </button>
+      </section>
+    </main>
+
+    <div class="nav-dots" id="navDots" aria-label="Page navigation"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
